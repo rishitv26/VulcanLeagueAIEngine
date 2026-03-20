@@ -13,9 +13,6 @@ def main(cmd_list, config: Config, detector: AI):
     util.clear()
     try:
         config = Config()
-
-        # Build threshold list. The special value "none" triggers grayscale
-        # probability output instead of a binary ink/no-ink decision.
         thresholds = []
         for entry in config.get("threshold").split(","):
             entry = entry.strip()
