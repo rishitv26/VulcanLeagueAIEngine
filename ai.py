@@ -730,7 +730,8 @@ class AI:
 
         print("Model successfully loaded.")
 
-    def eval_model(self, threshold: float):
+    def eval_model(self, threshold):
+        grayscale_mode = threshold is None
         config = Config()
         condition = config.get("condition")
         fragments = config.get("training_data")
@@ -761,7 +762,10 @@ class AI:
             pred_binary = []
             pixels_evaluated = 0
             for (y, x, _), prob in zip(eval_dset.pixels[:outputs.shape[0]], outputs):
-                pixel_pred = int(prob > threshold)
+                if grayscale_mode:
+                    pixel_pred = int(round(prob * 255))
+                else:
+                    pixel_pred = int(prob > threshold)
                 pred_image[y, x] = pixel_pred
                 pred_binary.append(pixel_pred)
                 pixels_evaluated += 1
