@@ -464,7 +464,13 @@ class AI:
         print("Model Generated, training model...")
         logger = Logger(self.base_path)
 
-        criterion = nn.BCEWithLogitsLoss()
+        all_labels = np.concatenate([train_dset.labels[i].flatten() for i in range(len(train_dset.labels))])
+        pos = all_labels.sum()
+        neg = len(all_labels) - pos
+        pos_weight = torch.tensor([neg / pos]).to(self.DEVICE)
+        print(f"[AI] pos_weight = {pos_weight.item():.2f} ({pos:.0f} ink / {neg:.0f} non-ink pixels)")
+ 
+        criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
         optimizer = optim.SGD(self.model.parameters(), lr=self.learning_rate)
         scheduler = torch.optim.lr_scheduler.OneCycleLR(optimizer, max_lr=self.learning_rate, total_steps=self.training_steps)
         self.model.train()
