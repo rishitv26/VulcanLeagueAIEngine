@@ -136,8 +136,10 @@ This codebase was used in an AP Research study examining the effect of segmentat
 
 ### Pruned Model Results:
 <img width="640" height="275" alt="image_0 4_0 (2)" src="https://github.com/user-attachments/assets/82214964-4dc9-4c40-a140-d191477b0e97" />
+<br><br>
 
 > Note that although the compressed model had a worse F-beta, the calculated effeciency score (F-beta / FLOPs) was 3 times better.
+
 
 ---
 
