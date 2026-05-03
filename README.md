@@ -60,7 +60,7 @@ Run `python main.py` twice within the desired environment.
 The first time, the program will successfully install all dependencies and quit
 The second time, you will be greeted with a commandline interface as follows:
 
-```bash
+```
 Loading...
 ...
 Welcome to the VLAE (Vulcan League AI Engine) <version number>
