@@ -128,6 +128,17 @@ This codebase was used in an AP Research study examining the effect of segmentat
 
 **Conclusion:** Filter compression is the preferred method for making ink detection accessible to low-resource community contributors.
 
+### Baseline Model Results:
+<img width="640" height="275" alt="image_0 4_0" src="https://github.com/user-attachments/assets/7319c4bd-978e-4f9b-8307-97d03f383bfe" />
+
+### Compressed Model Results:
+<img width="640" height="275" alt="image_0 4_0 (1)" src="https://github.com/user-attachments/assets/ea4c3d30-44fc-4c32-86cb-c4dd6a7623e8" />
+
+### Pruned Model Results:
+<img width="640" height="275" alt="image_0 4_0 (2)" src="https://github.com/user-attachments/assets/82214964-4dc9-4c40-a140-d191477b0e97" />
+
+> Note that although the compressed model had a worse F-beta, the calculated effeciency score (F-beta / FLOPs) was 3 times better.
+
 ---
 
 ## Useful References
