@@ -149,6 +149,5 @@ This codebase was used in an AP Research study examining the effect of segmentat
 - [Volume Cartographer](https://github.com/educelab/volume-cartographer)
 - [VolumeAnnotate](https://github.com/MosheLevy20/VolumeAnnotate)
 - [Kaggle Ink Detection Dataset](https://www.kaggle.com/competitions/vesuvius-challenge-ink-detection)
-- [UNETR Paper (Hatamizadeh et al., 2021)](https://arxiv.org/abs/2103.10504)
 
 ---
