@@ -1,7 +1,0 @@
-Pipfile
-__pycache__/
-data/
-config.txt
-.venv/
-logs/
-outputs/
